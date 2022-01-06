@@ -1,0 +1,62 @@
+<!--<div class="uk-position-center uk-overlay uk-overlay-default">
+        
+        
+    <form #f="ngForm"><br>
+
+               
+                <label>email</label>
+            <input class="uk-input" type="text" name="email" #email="ngModel" ngModel email required><br>
+            <label>password</label>
+            <input class="uk-input" type="password" name="password" #password="ngModel" ngModel required minlength="8"><br>
+
+
+    <button type="submit" class="btn btn-success" >Register</button>
+
+
+</form>
+
+(ngSubmit)="register(f)"-->
+<!--
+<div class="authBlock">
+    <h3>Sign Up</h3>
+
+    <div class="formGroup">
+      <input type="email" class="formControl" placeholder="Email Address" #userEmail required>
+    </div>
+
+    <div class="formGroup">
+      <input type="password" class="formControl" placeholder="Password" #userPwd required>
+    </div>
+
+    <div class="formGroup">
+      <input type="button" class="btn btnPrimary" value="Sign Up" (click)="UserAuthService.SignUp(userEmail.value, userPwd.value)">
+    </div>-->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
+    </head>
+    <body [ngStyle]="{'background' : 'url(./assets/v.jpg)'}" >
+      <div class="login">
+        <div class="login-header">
+          <h1 class="x"><br>Sign Up</h1>
+        </div>
+        <div class="login-form">
+          <h3>Email :</h3>
+          <input type="text" #userEmail placeholder="Email"/><br>
+          <h3>Password:</h3>
+          <input type="password" #userPwd placeholder="Password"/>
+          <br>
+          <input (click)="UserAuthService.SignUp(userEmail.value, userPwd.value)" type="button" value="Enregister" class="login-button"/>
+          <br>
+          <a routerLink="/login" class="sign-up">Login</a>
+          <br>
+           <h4 routerLink="/forgot-password" class="no-access">Can't access your account?</h4>
+        </div>
+      </div>    
+
+      

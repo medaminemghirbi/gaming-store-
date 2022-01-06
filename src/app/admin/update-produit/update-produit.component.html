@@ -1,0 +1,90 @@
+<style>
+    .center {
+  margin: auto;
+  width: 60%;
+  border: 8px solid #1b2949;
+  padding: 10px;
+}
+</style>
+            
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened><mat-nav-list>
+      <div class="logo py-4">
+          <img src="../assets/logo.png"/>
+      </div>
+      <mat-divider></mat-divider>
+      <h2 matSubheader class="mt-2">APPLICATIONS</h2>
+    
+  
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/dashbord">
+        <mat-icon>home</mat-icon>  Products
+      </a>
+
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/users"> 
+        <mat-icon>supervisor_account</mat-icon> Users </a>
+
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/feedbacks">
+          <mat-icon>feedback</mat-icon> FeedBacks</a>
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/mail">
+        <mat-icon> mail_outline</mat-icon>Send Mail</a>
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/settings">
+         <mat-icon>settings</mat-icon> Settings </a>
+    </mat-nav-list></mat-drawer>
+    <mat-drawer-content>
+      <mat-toolbar color="primary"  >
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        
+        </button>
+        <span>Admin Panel</span>
+        <span class="example-spacer"></span>
+  
+        <div class="dropdown">
+          <img src="./assets/user.jpg" alt="" class="user-image mr-1 p-2" />
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Administrateur
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <!--    <button (click)="  auth.sedeConnecter()" class="dropdown-item" routerLink="/connexion" >Sign Out</button>
+            <a  (click)="  auth.sedeConnecter()" routerLink="/" class="dropdown-item" >Home</a>-->
+          </div>
+        </div>
+      </mat-toolbar><br><br>
+      <div class="center">
+      <div class="container">
+        <div>
+            
+        <h2 style="text-align: center;">Modifier un Produit :</h2>
+        </div>
+        <form >
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label hidden >ID Produit</label>
+        <input readonly type="text" [(ngModel)]="currentProduit.idProduit"
+        name="idProduit" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4" >
+        <label >Nom Produit</label>
+        <input type="text"[(ngModel)]= "currentProduit.nomProduit"
+        name="nomProduit" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+        <label >Prix Produit</label>
+        <input type="text" [(ngModel)]= "currentProduit.prixProduit"
+        name="prixProduit" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label >Catégorie : </label>
+            <input  type="text" [(ngModel)]= "currentProduit.categorie"
+            name="categorie" class="form-control">
+        </div>
+            
+            <div class="mt-2">
+                <p align="center">
+                   <button type="submit" (click)="updateProduit()" class="btn btn-primary">Modifer</button>
+                  </p>
+                
+                </div>
+                </form>
+                </div>
+            </div>
+    </mat-drawer-content>
+  </mat-drawer-container>

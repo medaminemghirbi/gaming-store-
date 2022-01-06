@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+   <!-- <title> Responsive Contact Us Form  | CodingLab </title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body [ngStyle]="{'background' : 'url(./assets/y.jpg)'}">
+    
+  <div class="container">
+    <div class="content">
+      <div class="left-side">
+        <div class="address details">
+          <i class="fas fa-map-marker-alt"></i>
+          <div class="topic">Address</div>
+          <div class="text-one">Tunisia, Sousse</div>
+          <div class="text-two">Sahloul-Rue Planet food </div>
+           
+        </div>
+        <div class="phone details">
+          <i class="fas fa-phone-alt"></i>
+          <div class="topic">Phone</div>
+          <div class="text-one">+216 58 277 084 </div>
+    
+        </div>
+        <div class="email details">
+          <i class="fas fa-envelope"></i>
+          <div class="topic">Email</div>
+          <div class="text-two">support@gaming-store.com</div>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="topic-text">Send Us a message</div>
+        <p>If you have any Problem in the Shippement Service Or any Feedbacks, you can send Us message from here. It's Our pleasure to help you.</p>
+      <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div class="input-box">
+          <input type="email" placeholder="Enter your Email" ngModel
+          name="Email">
+        </div>
+       <!--<div class="input-box">
+         <textarea ngModel name="Text"  placeholder="Message ..." tabindex="5"></textarea>
+        </div>-->
+   <div class="input-box" id="contact">
+          <fieldset>
+              <textarea ngModel
+              name="Text" placeholder="Type your Message Here...." tabindex="5" required></textarea>
+            </fieldset>
+       </div>
+<br>
+        <div class="button">
+          <input type="submit" value="Send Now" >  
+        </div>
+ 
+      </form>
+    </div>
+    </div>
+  </div>
+</body>
+</html>

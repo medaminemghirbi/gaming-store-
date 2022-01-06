@@ -1,0 +1,16 @@
+biblo
+
+angular ==>
+"Anouk Zouaoui" [Online] :https://medium.com/@anoukzouaoui/angular-50b7630fa3f6
+HTML5 ==>
+"journaldunet"[Online].https://www.journaldunet.fr/web-tech/dictionnaire-du-webmastering/1203257-html5-hypertext-markup-langage5-definition-traduction/#:~:text=Définition%20du%20mot%20HTML5,forme%20d%27une%20page%20Web.&text=1%20a%20paru%20en%202016%20et%20HTML5.
+sass==>
+"wikipedia," [Online].https://fr.wikipedia.org/wiki/Sass_(langage)#:~:text=Sass%20(Syntactically%20awesome%20stylesheets)%20est,se%20compose%20de%20deux%20syntaxes.&text=Les%20fichiers%20de%20la%20syntaxe%20indentée%20et%20SCSS%20utilisent%20respectivement%20les%20extensions%20.
+firebase ==>
+"wikipedia," [Online].https://fr.wikipedia.org/wiki/Firebase
+typescript ==>
+"wikipedia," [Online].https://fr.wikipedia.org/wiki/TypeScript
+UML ==>
+"wikipedia," [Online].https://fr.wikipedia.org/wiki/UML_(informatique
+BOOSTRAP ==>
+"wikipedia," [Online].https://fr.wikipedia.org/wiki/Bootstrap_(framework)

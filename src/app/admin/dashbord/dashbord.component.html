@@ -1,0 +1,70 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened><mat-nav-list>
+      <div class="logo py-4">
+          <img src="../assets/logo.png"/>
+      </div>
+      <mat-divider></mat-divider>
+      <h2 matSubheader class="mt-2">APPLICATIONS</h2>
+    
+  
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/dashbord">
+        <mat-icon>home</mat-icon>  Products
+      </a>
+  
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/users"> 
+        <mat-icon>supervisor_account</mat-icon> Users </a>
+  
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/feedbacks">
+          <mat-icon>feedback</mat-icon> FeedBacks</a>
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/mail">
+        <mat-icon> mail_outline</mat-icon>Send Mail</a>
+      <a mat-list-item routerLinkActive="list-item-active" routerLink="/settings">
+         <mat-icon>settings</mat-icon> Settings </a>
+    </mat-nav-list></mat-drawer>
+    <mat-drawer-content>
+      <mat-toolbar color="primary"  >
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        
+        </button>
+        <span>Admin Panel</span>
+        <span class="example-spacer"></span>
+  
+        <div class="dropdown">
+          <img src="./assets/user.jpg" alt="" class="user-image mr-1 p-2" />
+          <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           Administrateur
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+           <button (click)="sedeconnecterr()" class="dropdown-item" >Sign Out</button>
+            <a  (click)="sedeconnecter()" routerLink="/" class="dropdown-item" >Home</a>
+          </div>
+        </div>
+      </mat-toolbar>
+      <br><br> 
+      <p align="center">
+      &nbsp;&nbsp;  <button routerLink="/addprod" type="button"  class="btn btn-secondary ">Ajouter Un Produit</button><br><br>
+    </p>
+      <div class="container">
+          <div class="card shadow mb-4">
+          <div class="card-body">
+          <table class="table table-striped">
+          <tr> <th>ID</th><th>Image</th><th>Nom</th> <th>Prix</th> <th>Catégorie</th><th>Quantité</th><th>Modifier</th><th>Supprimer</th> </tr>
+          <tbody *ngFor="let produit of produits">
+          <tr >
+          <td>{{produit.idProduit}}</td>
+          <td><img   width="120px" height="120px" [src]="produit.image" /></td>
+          <td>{{produit.nomProduit}}</td>
+          <td>{{produit.prixProduit}}TND</td>
+          <td>{{produit.categorie}}</td>
+          <td>{{produit.quan}}</td>
+          <td><a class="btn btn-success" [routerLink]="['/updateProduit',produit.idProduit]">Modifier</a></td> 
+          <td><a class="btn btn-danger" (click)="supprimerProduit(produit)">Supprimer</a></td>
+          </tr>
+          </tbody>
+          </table>
+          </div>
+          </div>
+          </div>
+      
+    </mat-drawer-content>
+  </mat-drawer-container>

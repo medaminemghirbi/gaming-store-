@@ -1,0 +1,74 @@
+
+<!--<div class="uk-position-center uk-overlay uk-overlay-default">
+        
+        
+    <form #f="ngForm" (click)="login(f)"><br>
+
+               
+                <label>email</label>
+            <input class="uk-input" type="text" name="email" #email="ngModel" ngModel email required><br>
+            <label>password</label>
+            <input class="uk-input" type="password" name="password" #password="ngModel" ngModel required minlength="8"><br>
+
+
+    <button type="submit" class="btn btn-success" >Connecter</button>
+
+
+</form>-->
+<!--<div class="authBlock">
+    <h3>Sign In</h3>
+    <div class="formGroup">
+      <input type="text" class="formControl" placeholder="Username" #userName required>
+    </div>
+
+    <div class="formGroup">
+      <input type="password" class="formControl" placeholder="Password" #userPassword required>
+    </div>
+
+     Calling SignIn Api from AuthService 
+    <div class="formGroup">
+      <input type="button" class="btn btnPrimary" value="Log in" (click)="UserAuthService.SignIn(userName.value, userPassword.value)">
+    </div>
+    <div class="forgotPassword">
+      <span routerLink="/forgot-password">Forgot Password?</span>
+    </div>
+    <div class="redirectToLogin">
+      <span>Don't have an account?<span class="redirect" routerLink="/register"> Sign Up</span></span>
+    </div>
+  -->
+  
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
+  </head>
+  <body [ngStyle]="{'background' : 'url(./assets/v.jpg)'}" >
+    <div class="login">
+      <div class="login-header">
+        <h1 class="x"><br>Se Connecter</h1>
+      </div>
+      <div class="login-form">
+        <h3>Email :</h3>
+        <input type="text" #userName placeholder="Email"/><br>
+        <h3>Password:</h3>
+        <input type="password" #userPassword  placeholder="Password"/>
+        <br>
+        <input (click)="UserAuthService.SignIn(userName.value, userPassword.value)" type="button" value="Login"  class="login-button"/>
+        <br>
+        <a routerLink="/register" class="sign-up">Sign Up!</a>
+        <br>
+         <h4 routerLink="/forgot-password" class="no-access">Can't access your account?</h4>
+      </div>
+    </div>
+    
+    
+    
+  
+  
+  
+  
